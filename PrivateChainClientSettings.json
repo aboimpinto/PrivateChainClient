@@ -1,0 +1,9 @@
+{
+    "UserProfile": 
+    {
+        "PublicSigningAddress": "__PublicSigningAddress__",
+        "PrivateSigningAddress": "__PrivateSigningAddress__",
+        "PublicEncryptAddress": "__PublicEncryptAddress__",
+        "PrivateEncryptAddress": "__PrivateEncryptAddress__"
+    }
+}

@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="nbitcoin" Version="7.0.30" />
+  </ItemGroup>
+
 </Project>

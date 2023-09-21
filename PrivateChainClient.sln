@@ -5,10 +5,6 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrivateChainClient", "PrivateChainClient\PrivateChainClient.csproj", "{9D40268E-DAD6-4304-9D02-1C606C2A95C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Encripting.Manager", "Encripting.Manager\Encripting.Manager.csproj", "{DA395E00-AC91-4053-935A-ED5F25F641D4}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Signing.Manager", "Signing.Manager\Signing.Manager.csproj", "{2BF7233F-8A05-44A4-846D-E74E4A68BC2A}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

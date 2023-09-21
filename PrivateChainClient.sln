@@ -5,6 +5,10 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrivateChainClient", "PrivateChainClient\PrivateChainClient.csproj", "{9D40268E-DAD6-4304-9D02-1C606C2A95C2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Signing.Manager", "Signing.Manager\Signing.Manager.csproj", "{F2180CB7-882E-4DF9-B885-F46D7E1D5D62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Encripting.Manager", "Encripting.Manager\Encripting.Manager.csproj", "{A42B562B-38F9-480D-932C-B76CA05F57C6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,5 +30,13 @@ Global
 		{2BF7233F-8A05-44A4-846D-E74E4A68BC2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2BF7233F-8A05-44A4-846D-E74E4A68BC2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2BF7233F-8A05-44A4-846D-E74E4A68BC2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2180CB7-882E-4DF9-B885-F46D7E1D5D62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2180CB7-882E-4DF9-B885-F46D7E1D5D62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2180CB7-882E-4DF9-B885-F46D7E1D5D62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2180CB7-882E-4DF9-B885-F46D7E1D5D62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A42B562B-38F9-480D-932C-B76CA05F57C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A42B562B-38F9-480D-932C-B76CA05F57C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A42B562B-38F9-480D-932C-B76CA05F57C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A42B562B-38F9-480D-932C-B76CA05F57C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

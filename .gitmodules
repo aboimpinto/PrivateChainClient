@@ -1,6 +1,3 @@
-[submodule "Encripting.Manager"]
-	path = Encripting.Manager
-	url = git@github.com:aboimpinto/Encripting.Manager.git
 [submodule "Signing.Manager"]
 	path = Signing.Manager
 	url = git@github.com:aboimpinto/Signing.Manager.git

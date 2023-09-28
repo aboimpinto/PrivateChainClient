@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Encripting.Manager\Encripting.Manager.csproj" />
+    <ProjectReference Include="..\Encrypting.Manager\Encrypting.Manager.csproj" />
     <ProjectReference Include="..\Signing.Manager\Signing.Manager.csproj" />
   </ItemGroup>
 

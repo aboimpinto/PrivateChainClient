@@ -12,7 +12,7 @@ public class Program
         var client = new TcpClient();
         // client.Connect("localhost", 4566);
         // client.Connect("quirky_knuth", 4566);
-        client.Connect("172.19.0.2", 4566);
+        client.Connect("PrivateChain_Server", 4566);
         Console.WriteLine("Connected to server...");
 
 

@@ -1,6 +1,8 @@
 ﻿using System.Net;
 using System.Net.Sockets;
 using Encripting.Manager;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Signing.Manager;
 
 namespace PrivateChainClient;
@@ -9,11 +11,30 @@ public class Program
 {
     public static void Main()
     {
-        var client = new TcpClient();
-        // client.Connect("localhost", 4566);
-        // client.Connect("quirky_knuth", 4566);
-        client.Connect("PrivateChain_Server", 4566);
-        Console.WriteLine("Connected to server...");
+        CreateHostBuilder()
+            .Build()
+            .Run();
+    }
+
+    public static IHostBuilder CreateHostBuilder() => 
+        Host.CreateDefaultBuilder()
+        .UseSystemd()
+        .ConfigureLogging(x => 
+        {
+
+        })
+        .ConfigureServices((hostcontext, services) => 
+        {
+            services.AddHostedService<PrivateChainClientWorker>();
+        });
+
+}
+
+
+
+        // var client = new TcpClient();
+        // client.Connect("PrivateChain_Server", 4566);
+        // Console.WriteLine("Connected to server...");
 
 
         // // Bitcoin Example
@@ -71,7 +92,4 @@ public class Program
 
         // var messageDecryptedByActorB = EncryptKeys.Decrypt(encryptedMessage, rsaActorBKeys.PrivateKey);
         // Console.WriteLine("Message decrypted by ActorB private key: " + messageDecryptedByActorB);
-    }
-}
-
 

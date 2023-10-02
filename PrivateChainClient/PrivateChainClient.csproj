@@ -18,8 +18,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Encrypting.Manager\Encrypting.Manager.csproj" />
-    <ProjectReference Include="..\Signing.Manager\Signing.Manager.csproj" />
+    <ProjectReference Include="..\Modules\Encrypting.Manager\Encrypting.Manager.csproj" />
+    <ProjectReference Include="..\Modules\EventAggregator.Manager\EventAggregator.Manager.csproj" />
+    <ProjectReference Include="..\Modules\Signing.Manager\Signing.Manager.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,9 +1,6 @@
-﻿using System.Net;
-using System.Net.Sockets;
-using Encripting.Manager;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Signing.Manager;
+using Olimpo;
 
 namespace PrivateChainClient;
 
@@ -26,7 +23,8 @@ public class Program
         .ConfigureServices((hostcontext, services) => 
         {
             services.AddHostedService<PrivateChainClientWorker>();
-        });
+        })
+        .RegisterEventAggregatorManager();
 
 }
 

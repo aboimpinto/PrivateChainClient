@@ -1,4 +1,5 @@
 using System.Net.Sockets;
+using System.Text;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
@@ -22,6 +23,9 @@ namespace PrivateChainClient
             client.Connect("PrivateChain_Server", 4566);
             Console.WriteLine("Connected to server...");
 
+            var stream = client.GetStream();
+            var handshakeRequestBytes = Encoding.ASCII.GetBytes("HandshakeRequest");
+            stream.Write(handshakeRequestBytes, 0, handshakeRequestBytes.Length);
 
             return Task.CompletedTask;
         }

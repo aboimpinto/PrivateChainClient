@@ -7,3 +7,6 @@
 [submodule "Modules/EventAggregator.Manager"]
 	path = Modules/EventAggregator.Manager
 	url = git@github.com:aboimpinto/EventAggregator.Manager.git
+[submodule "RPC.Model"]
+	path = RPC.Model
+	url = git@github.com:aboimpinto/RPC.Model.git

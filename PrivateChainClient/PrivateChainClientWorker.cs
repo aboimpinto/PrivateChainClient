@@ -3,7 +3,7 @@ using System.Text;
 using System.Text.Json;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using RPC.Model;
+using Olimpo.RPC.Model;
 
 namespace PrivateChainClient
 {

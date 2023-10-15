@@ -1,7 +1,9 @@
 using System.Net.Sockets;
 using System.Text;
+using System.Text.Json;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using RPC.Model;
 
 namespace PrivateChainClient
 {
@@ -24,7 +26,21 @@ namespace PrivateChainClient
             Console.WriteLine("Connected to server...");
 
             var stream = client.GetStream();
-            var handshakeRequestBytes = Encoding.ASCII.GetBytes("HandshakeRequest");
+
+            var handshake = new HandshakeCommand();
+            handshake.InputParameters.NodeType = NodeType.GovernanceNode;
+            handshake.InputParameters.NodeId = "nodeId";
+            handshake.InputParameters.NodeResposablieAddress = "nodeResposablieAddress";
+
+            var jsonOptions = new JsonSerializerOptions
+            {
+                Converters = { new CommandBaseConverter() }
+            };
+            var jsonHandshake = JsonSerializer.Serialize(handshake, jsonOptions);
+
+            // var xxx = JsonSerializer.Deserialize<HandshakeCommand>(jsonHandshake, jsonOptions);
+
+            var handshakeRequestBytes = Encoding.ASCII.GetBytes(jsonHandshake);
             stream.Write(handshakeRequestBytes, 0, handshakeRequestBytes.Length);
 
             return Task.CompletedTask;

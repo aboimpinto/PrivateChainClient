@@ -21,6 +21,7 @@
     <ProjectReference Include="..\Modules\Encrypting.Manager\Encrypting.Manager.csproj" />
     <ProjectReference Include="..\Modules\EventAggregator.Manager\EventAggregator.Manager.csproj" />
     <ProjectReference Include="..\Modules\Signing.Manager\Signing.Manager.csproj" />
+    <ProjectReference Include="..\Modules\RPC.Model\RPC.Model.csproj" />
   </ItemGroup>
 
 </Project>

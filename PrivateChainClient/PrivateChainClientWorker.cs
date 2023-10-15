@@ -27,6 +27,8 @@ namespace PrivateChainClient
 
             var stream = client.GetStream();
 
+            ThreadPool.QueueUserWorkItem(this.StartListening, stream);
+
             var handshake = new HandshakeCommand();
             handshake.InputParameters.NodeType = NodeType.GovernanceNode;
             handshake.InputParameters.NodeId = "nodeId";
@@ -38,12 +40,27 @@ namespace PrivateChainClient
             };
             var jsonHandshake = JsonSerializer.Serialize(handshake, jsonOptions);
 
-            // var xxx = JsonSerializer.Deserialize<HandshakeCommand>(jsonHandshake, jsonOptions);
-
             var handshakeRequestBytes = Encoding.ASCII.GetBytes(jsonHandshake);
             stream.Write(handshakeRequestBytes, 0, handshakeRequestBytes.Length);
 
             return Task.CompletedTask;
+        }
+
+        private void StartListening(object obj)
+        {
+            byte[] buffer = new byte[256];;
+            string data;
+            var position = 0;
+
+            var stream = (NetworkStream)obj;
+
+            while(true)
+            {
+                while((position = stream.Read(buffer, 0, buffer.Length)) != 0)
+                {
+                    data = Encoding.UTF8.GetString(buffer, 0, position);
+                }
+            }
         }
     }
 }

@@ -1,6 +1,8 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Olimpo;
+using NetworkClient;
+using TcpOlimpoClient.Manager;
 
 namespace PrivateChainClient;
 
@@ -24,7 +26,10 @@ public class Program
         {
             services.AddHostedService<PrivateChainClientWorker>();
         })
-        .RegisterEventAggregatorManager();
+        .RegisterEventAggregatorManager()
+        .RegisterBootstrapperManager()
+        .RegisterNetworkClient()
+        .RegisterTcpOlimpoClient();
 
 }
 

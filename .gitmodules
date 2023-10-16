@@ -10,3 +10,6 @@
 [submodule "Modules/RPC.Model"]
 	path = Modules/RPC.Model
 	url = git@github.com:aboimpinto/RPC.Model.git
+[submodule "Modules/Bootstrapper.Manager"]
+	path = Modules/Bootstrapper.Manager
+	url = git@github.com:aboimpinto/Bootstrapper.Manager.git

@@ -22,6 +22,9 @@
     <ProjectReference Include="..\Modules\EventAggregator.Manager\EventAggregator.Manager.csproj" />
     <ProjectReference Include="..\Modules\Signing.Manager\Signing.Manager.csproj" />
     <ProjectReference Include="..\Modules\RPC.Model\RPC.Model.csproj" />
+    <ProjectReference Include="..\Modules\Bootstrapper.Manager\Bootstrapper.Manager.csproj" />
+    <ProjectReference Include="..\Services\NetworkClient\NetworkClient.csproj" />
+    <ProjectReference Include="..\Modules\TcpClient.Manager\TcpOlimpoClient.Manager.csproj" />
   </ItemGroup>
 
 </Project>

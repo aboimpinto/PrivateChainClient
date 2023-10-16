@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Modules\Bootstrapper.Manager\Bootstrapper.Manager.csproj" />
+    <ProjectReference Include="..\..\Modules\TcpClient.Manager\TcpOlimpoClient.Manager.csproj" />
+    <ProjectReference Include="..\..\Modules\RPC.Model\RPC.Model.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>
